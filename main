@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class Main {
+    public static boolean winningposition(int a) {
+        boolean b = false;
+        if (a % 3 == 0 || a%3==2) {
+            b = true;
+        }
+        return b;
+    }
+        public static boolean losingposition(int b){
+            boolean a = false;
+            if (b%3==1) {
+                a = true;
+            }
+
+
+            return a;
+        }
+    public static void main(String[] args) {
+        int state=18;
+        while(state>=0) {
+            System.out.println("TOTAL MATCHES-"+state);
+            System.out.println();
+            Scanner scan = new Scanner(System.in);
+            int minus1 = state - 1;
+            boolean checker = losingposition(minus1);
+            if (checker == true) {
+                System.out.println("OKay, im removing 1 match");
+                state = state - 1;
+                System.out.println("There are "+state+" matches left");
+                System.out.println();
+                if (state==0 || state<=0){
+                    break;
+                }
+            } else if (checker==false) {
+                System.out.println("OKay, im removing 2 matches");
+                state=state-2;
+                System.out.println("There are "+state+" matches left");
+                System.out.println();
+                if (state==0){
+                    break;
+                }
+            }
+
+            System.out.println("HELLO! how many matches do you want to remove from "+state+" ?");
+            System.out.println();
+            int matches = scan.nextInt();
+            if (matches>0 && matches<=2){
+            state = state - matches;
+            if (state==0 || state<=0) {
+                System.out.println("i won!");
+                break;
+            }
+            }else{
+                System.out.println("you can only remove 1 or 2 matches.");
+                System.out.println();
+                break;
+
+            }
+        }
+    }
+}
