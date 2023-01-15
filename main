@@ -34,7 +34,7 @@ public class Main {
                     break;
                 }
             } else if (checker==false) {
-                System.out.println("OKay, im removing 2 matches");
+                System.out.println("Okay, im removing 2 matches");
                 state=state-2;
                 System.out.println("There are "+state+" matches left");
                 System.out.println();
