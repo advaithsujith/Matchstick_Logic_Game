@@ -43,7 +43,7 @@ public class Main {
                 }
             }
 
-            System.out.println("HELLO! how many matches do you want to remove from "+state+" ?");
+            System.out.println("how many matches do you want to remove from "+state+" ?");
             System.out.println();
             int matches = scan.nextInt();
             if (matches>0 && matches<=2){
