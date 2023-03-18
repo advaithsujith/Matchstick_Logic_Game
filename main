@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static boolean winningposition(int a) {
+    public static boolean winningposition(int a) {   //doesnt need to be used, since we only have two options.
         boolean b = false;
         if (a % 3 == 0 || a%3==2) {
             b = true;
